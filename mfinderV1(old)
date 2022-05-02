@@ -1,0 +1,17 @@
+/** @param {NS} ns *///mfinder.js by HeroiX. REAL HEADS ONLY.
+export async function main(ns) {
+    //change target = ("HOSTNAME") to target host
+    var target = ns.args[0];
+    //variables
+    var servmoneyavailable = (ns.getServerMoneyAvailable(target));
+    var maxservervalue = (ns.getServerMaxMoney(target));
+    //functions and operations
+    {
+        ns.tprint("=========$==mfinder==$==========")
+        ns.tprint(target, " Server MAX Value:");
+        ns.tprint(maxservervalue);
+        ns.tprint(target, " Server Money Available:");
+        ns.tprint(servmoneyavailable);
+        ns.tprint("=========$==mfinder==$==========")
+    }
+}
