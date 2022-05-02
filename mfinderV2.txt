@@ -1,0 +1,44 @@
+/** @param {NS} ns *///mfinder.js by HeroiX. REAL HEADS ONLY.
+export async function main(ns) {
+	//use: run mfinder.js (HOSTNAME) to change target
+	//variables
+	var target = ns.args[0];
+	var servmoneyavailable = (ns.getServerMoneyAvailable(target));
+	var maxservervalue = (ns.getServerMaxMoney(target));
+	var securitylevel = (ns.getServerSecurityLevel(target));
+	var securitylevelmin = (ns.getServerMinSecurityLevel(target));
+	var serverRAM = (ns.getServerMaxRam(target));
+	var hacktime = (ns.getHackTime(target));
+	var growtime = (ns.getGrowTime(target));
+	var weakentime = (ns.getWeakenTime(target));
+	var hacklevel = (ns.getServerRequiredHackingLevel(target));
+	//milliseconds to h,m,s,ms
+	{
+		var hacktime = Math.floor(ns.getHackTime(target) / 60000)
+		var growtime = Math.floor(ns.getGrowTime(target) / 60000)
+		var weakentime = Math.floor(ns.getWeakenTime(target) / 60000)
+	}
+	//functions and operations(ServerProfiler.exe BUILT IN!)
+	ns.tprint("============$==mfinder==$=============")
+	ns.tprint(target, " Server MAX Value:");
+	ns.tprint("$ ", maxservervalue);
+	ns.tprint(target, " Server Money Available:");
+	ns.tprint("$ ", servmoneyavailable);
+	ns.tprint("=======$==ServerProflier.exe==$=======")
+	ns.tprint(target, " Server MAX RAM:");
+	ns.tprint(serverRAM, "gb(s)");
+	ns.tprint(target, " Server Required Hack Level");
+	ns.tprint("lvl: ", hacklevel);
+	ns.tprint(target, " Server CURRENT Security Level:");
+	ns.tprint(securitylevel);
+	ns.tprint(target, " Server MIN Security Level:");
+	ns.tprint(securitylevelmin);
+	ns.tprint("======================================")
+	ns.tprint(target, " Server Hack Time:");
+	ns.tprint(hacktime, "mins");
+	ns.tprint(target, " Server Grow Time:");
+	ns.tprint(growtime, "mins");
+	ns.tprint(target, " Server Weaken Time:");
+	ns.tprint(weakentime, "mins");
+	ns.tprint("============$==mfinder==$=============")
+}
